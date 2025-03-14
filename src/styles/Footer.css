@@ -1,0 +1,60 @@
+/* src/styles/Footer.css */
+  .footer {
+    background-color: white; 
+    color: #333; 
+    padding: 0;
+    border-top: 1px solid #794CB3; 
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .logo-footer img {
+    cursor: pointer;
+    display: flex;
+    width: 235px;
+    height: 188px;
+  }
+
+  .social-media--list {
+    display: flex;
+    justify-content: center; /* Distribute space evenly */
+    align-items: center; /* Vertically center the logos */
+  }
+  
+  .social-media--list a {
+    margin: 0 10px; /* Optional: add space between the logos */
+  }
+  
+  .logo-img {
+    width: 24px; /* You can adjust the size of the logos */
+    height: auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color); 
+  }
+  
+  .footer-section p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+  

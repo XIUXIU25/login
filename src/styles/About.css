@@ -1,0 +1,82 @@
+/* src/styles/AboutUs.css */
+  .about-us {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-us h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .accordion-item:last-child {
+    border-bottom: none;
+  }
+  
+  .accordion-header {
+    width: 100%;
+    background: #f9f9f9;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+  }
+  
+  .accordion-header:hover {
+    background: #eee;
+  }
+  
+  .accordion-header .arrow {
+    font-size: 1rem;
+    margin-left: auto;
+  }
+  
+  .accordion-body {
+    padding: 15px 20px;
+    background: white;
+    animation: slideDown 0.3s ease;
+  }
+  
+  .accordion-body p {
+    margin: 0;
+  }
+  
+  .accordion-body ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+  }
+  
+  .accordion-body ul li {
+    margin: 5px 0;
+  }
+  
+  @keyframes slideDown {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: auto;
+      opacity: 1;
+    }
+  }
+  

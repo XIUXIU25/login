@@ -1,0 +1,134 @@
+/* src/styles/ProfilePage.css  */
+  .profile-page {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .main-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-item label {
+    width: 150px;
+    font-weight: bold;
+  }
+
+  .profile-item span {
+    width: 150px;
+  }
+
+  .profile-pic {
+    font-weight: bold;
+  }
+  
+  .profile-item input[type="text"],
+  .profile-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .profile-item button {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    color:#794CB3;
+    cursor: pointer;
+  }
+
+  .profile-item button:hover {
+    color: #52327c;
+    text-decoration: underline;
+  }
+  
+  .image-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .profile-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border 0.3s;
+    border-radius: 50%;
+  }
+  
+  .profile-img:hover {
+    border-color: #007bff;
+  }
+  
+  .profile-img.selected {
+    border-color: #007bff;
+  }
+  
+  .profile-pic-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile-item button {
+    margin-left: 10px;
+  }
+  
+  .profile-item button + button {
+    margin-left: 5px;
+  }
+  
+  .profile-item button {
+    padding: 5px 10px;
+  }
+ 
+  .error-message {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: red;
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+  }
+  
+  .profile-item input[type="text"] {
+    flex: 1;
+    max-width: 150px;
+  }
+  
+  .profile-item input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+
+  @media (max-width: 768px) {
+
+    .profile-page {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+    
+    .profile-item {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  
+    .profile-item span {
+      width: auto;
+      margin-bottom: 5px;
+    }
+  
+    .profile-item button {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+  

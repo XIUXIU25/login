@@ -1,0 +1,257 @@
+/* src/styles/Header.css */
+.header {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto auto;
+    align-items: center;
+    background-color: white;
+    border-bottom: 3px solid #794CB3;
+    font-family: montserrat;
+
+    padding: 10px 20px;
+    gap: 20px
+    
+  }
+
+  .logo {
+    cursor: pointer;
+    display: flex;
+    width: 59.17px;
+    height: 52px;
+    /* padding-left: 50px; */
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .skiplink {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #794CB3;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .skiplink:focus {
+    top: 0;
+  }
+  
+
+  .nav {
+    display:grid;
+    position: relative;
+  }
+  
+  .full-nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+    padding: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    gap: 40px;
+  }
+  
+  .full-nav .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes icon to the right */
+    width: 100%; /* Ensure full button width */
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 8px;
+
+    text-decoration: none;
+    color: #333;
+  }
+
+
+
+  .full-nav .menu-item:hover {
+    text-decoration: underline;
+    color: #794CB3;
+  }
+  
+  .full-nav .menu-item.active {
+    font-weight: bold;
+    color: #794CB3;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+  }
+
+  .full-nav .menu-text {
+    flex-grow: 1;
+  }
+
+  .dropdown-icon {
+    width: 12px;  /* Adjust size as needed */
+    height: 12px;
+    /* margin-left: auto; 
+    vertical-align: middle; */
+    /* transition: transform 0.3s ease-in-out; */
+  }
+  
+  
+  .hamburger {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  
+  .dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    border-left: 1px solid #ddd;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    z-index: 1000;
+    width: 250px;
+    height: 100%;
+  }
+
+  .nav-close-button {
+    display: flex;
+    justify-content: right;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-bottom: 30px;
+  }
+  
+  .dropdown-menu li {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: right;
+    font-size: 1.2rem;
+  }
+  
+  .dropdown-menu li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .dropdown-menu .menu-item {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-menu .menu-item:hover {
+    color: #794CB3;
+  }
+
+  .profile {
+    padding-right: 50px;
+    padding-left: 50px;
+    position: relative;
+  }
+
+  .profile-icon {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .profile-dropdown-menu {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .username {
+    display: flex;
+    font-size: 1rem;
+    color: #333;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #794CB3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  
+  .profile-settings:hover {
+    background-color: #52327c;
+  }
+
+  .header-profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    padding: 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .full-nav {
+      display: none; 
+    }
+  
+    .hamburger {
+      display: flex; 
+      justify-self: end;
+    }
+
+    .dropdown-menu {
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    .profile {
+      padding: 15px;
+      padding-left: 0;
+      margin: 10px;
+    }
+    .custom-form-label {
+      font-weight: 300;
+      color: #9A9A9A;
+    }
+    
+    .custom-input {
+      color: #9A9A9A;
+      font-weight: 300;
+    }
+
+  }

@@ -1,0 +1,49 @@
+/* src/styles/AddEvents.css */
+.add-event {
+  padding: 20px;
+  text-align: center;
+}
+
+.add-event h1 {
+  margin-bottom: 20px;
+}
+
+.add-event form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.add-event label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 300px;
+}
+
+.add-event input,
+.add-event select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-event button {
+  padding: 10px 20px;
+  background-color: #794cb3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-event button:hover {
+  background-color: #52327c;
+}
+
+.add-event h2 {
+  font-size: 0.75rem;
+  font-weight: normal;
+  color:grey;
+}

@@ -1,0 +1,117 @@
+/* src/styles/Events.css   */
+  .events-gallery {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .events-gallery h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .filters button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .filters button.active {
+    background-color: #794CB3;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .filters button:hover {
+    background-color: #52327c;
+    color: white;
+  }
+
+  .events-eventlist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-content: center;
+  }
+  
+  .events-carcard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .events-carcard img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+  }
+  
+  .events-carcard h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .events-carcard p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .events-carcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-open {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #794CB3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .modal-open:hover {
+    background-color: #52327c;
+  }
+
+  .success-message {
+    color: red;
+    font-weight: bold;
+    padding: 1rem;
+  }
+
+  @media (max-width: 1080px) {
+    .events-eventlist {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .events-eventlist {
+      grid-template-columns: 1fr; 
+    }
+  }
+  
+
+  
