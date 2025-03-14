@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import AuthModal from "./components/AuthModal"
-import PasswordResetEmail from "./components/email/resetEmail"
 
 import HomePage from "./pages/Homepage"
 import Events from "./pages/Events"
@@ -14,6 +13,7 @@ import ProfilePage from "./pages/ProfilePage"
 import DonatePage from "./pages/DonatePage"
 // import AuthModal from "./components/AuthModal"
 // import FormComponent from "./components/FormComponent"
+import ResetYourPassword from "./components/ResetYourPassword"
 
 import { UserProvider } from "./contexts/UserContext"
 
@@ -67,8 +67,9 @@ function App () {
             <Route path="/blogs" element={<Blogs blogs={blogs} />} />
             <Route path="/profile" element={<ProfilePage profile={profile} setProfile={setProfile} />} />
             <Route path="/donate" element={<DonatePage />} />
+            <Route path="/reset-password" element={<ResetYourPassword visible={true} onClose={() => {}} />} />
 
-            <Route path="/email-preview" element={<PasswordResetEmail username="John Doe" resetLink="https://yourwebsite.com/reset-password/12345" />} />
+            {/* <Route path="/email-preview" element={<PasswordResetEmail username="John Doe" resetLink="https://yourwebsite.com/reset-password/12345" />} /> */}
             {/* As login/register modal is component not SPA, we prefer not include them in router list */}
             {/* <Route path="/login" element={<AuthModal />} /> */}
             {/* <Route path="/register" element={<AuthModal />} /> */}
