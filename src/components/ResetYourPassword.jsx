@@ -12,10 +12,16 @@ const getPasswordStrength = (password) => {
 
 const ResetYourPassword = ({ visible, onClose }) => {
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [step, setStep] = useState(1);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   
   const handleSubmit = () => {
+    if (password !== confirmPassword) {
+      setError("Passwords do not match!");
+      return;
+    }
     setStep(2);
   };
   
@@ -58,11 +64,13 @@ const ResetYourPassword = ({ visible, onClose }) => {
               label={<span style={{ color: "grey" }}>Password</span>}
               name="password"
               required={false}
-              rules={[{ required: true, message: "Please enter your password!" }]}
             >
               <Input.Password
                 placeholder="Enter your password"
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setError("");
+                }}
               />
               {password && (
                 <>
@@ -92,10 +100,16 @@ const ResetYourPassword = ({ visible, onClose }) => {
               label={<span style={{ color: "grey" }}>Confirm Password</span>}
               name="confirmPassword"
               required={false}
-              rules={[{ required: true, message: "Please confirm your password!" }]}
             >
-              <Input.Password placeholder="Confirm your password" />
+              <Input.Password 
+                placeholder="Confirm your password" 
+                onChange={(e) => {
+                  setConfirmPassword(e.target.value);
+                  setError("");
+                }}
+              />
             </Form.Item>
+            {error && <div style={{ color: "#ff4d4f", textAlign: "center", marginBottom: "1rem" }}>{error}</div>}
             <Form.Item style={{ textAlign: "center" }}>
               <Button
                 htmlType="submit"
