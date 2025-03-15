@@ -1,11 +1,15 @@
 // src/pages/Homepage.jsx
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react"; 
 import '../styles/Homepage.css';
+import { useNavigate, useSearchParams } from "react-router-dom";
+import ResetYourPassword from "../components/ResetYourPassword"; // Import the component
 
 
 function HomePage() {
   const navigate = useNavigate(); //React Router navigate function
+  const [searchParams] = useSearchParams();
+  const isResetPassword = searchParams.get("is-reset-password") === "true";
+  const [isResetPasswordVisible,setIsResetPasswordVisibled] = useState(isResetPassword);
 
   const featuredEvents = [
     {
@@ -23,8 +27,9 @@ function HomePage() {
   ];
 
   return (
+  <>
+    <ResetYourPassword visible={isResetPasswordVisible} onClose={()=>setIsResetPasswordVisibled(false)}/>
     <div className="homepage">
-     
       <section className="hero">
         <div className="hero-content">
           <h1>Building Bridges for</h1>
@@ -61,6 +66,8 @@ function HomePage() {
         <button onClick={() => navigate("/profile")}>Sign Up NOW!</button>
       </section>
     </div>
+  </>
+
   );
 }
 
